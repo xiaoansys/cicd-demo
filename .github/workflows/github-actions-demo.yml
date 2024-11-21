@@ -1,4 +1,4 @@
-name: GitHub Actions Play
+name: SCADE CICD DEMO
 run-name: ${{ github.actor }} is playing GitHub Actions 🚀
 on: [push]
 jobs:
