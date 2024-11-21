@@ -1,8 +1,8 @@
 name: SCADE CICD DEMO
-run-name: ${{ github.actor }} is playing GitHub Actions 🚀
+run-name: ${{ github.actor }} is playing SCADE CICD Demo 🚀
 on: [push]
 jobs:
-  Explore-GitHub-Actions:
+  Explore-SCADE-CICD-Actions:
     runs-on: self-hosted
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
