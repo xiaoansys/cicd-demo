@@ -15,6 +15,8 @@ model/scade-display/DisplayPanel/
 model/scade-display/DisplayPanel_Simulation/
 model/scade-display/DisplayPanel_Exe/
 model/scade-test/Test_TEE/
+Model/Calculator/KCG/
+Model/Calculator/Simulation/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
