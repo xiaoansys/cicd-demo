@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MappingFile>
+	 	<operatorMappings>
+		<OperatorMapping name="Caculator" oid="!ed/55f/7779/17B4/58db12547c75">
+			<mappingItems>
+				<MappingItem>
+					<output>
+						<Plug name="output2" type="real" oid="7a85db0b-10fb-4cf2-bd83-6f312645bbf7" pathname="Rapid Prototype\specification.rgfx" layer="control_panel"/>
+					</output>
+					<inputs>
+						<Variable name="Operand2" type="TFloat32" oid="!ed/562/7779/17B4/58db126292" instancepath="Caculator/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="output1" type="real" oid="49141e22-c215-4540-a511-aa25295d6034" pathname="Rapid Prototype\specification.rgfx" layer="control_panel"/>
+					</output>
+					<inputs>
+						<Variable name="Operand1" type="TFloat32" oid="!ed/561/7779/17B4/58db1261163b" instancepath="Caculator/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="On" type="bool" oid="8e75be57-4f1a-4dca-aa0c-e5e9f1c6197b" pathname="Rapid Prototype\specification.rgfx" layer="control_panel"/>
+					</output>
+					<inputs>
+						<Variable name="Power" type="bool" oid="!ed/595/7779/17B4/58db13467980" instancepath="Caculator/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Plug name="calctype" type="int" oid="b964ec3b-0d1b-463f-93d5-ae9b67b2aa06" pathname="Rapid Prototype\specification.rgfx" layer="control_panel"/>
+					</output>
+					<inputs>
+						<Variable name="Do" type="TCalculator" oid="!ed/5fe/7779/17B4/58db170d4c19" instancepath="Caculator/"/>
+					</inputs>
+				</MappingItem>
+				<MappingItem>
+					<output>
+						<Variable name="Result" type="TFloat32" oid="!ed/563/7779/17B4/58db12644ba5" instancepath="Caculator/"/>
+					</output>
+					<inputs>
+						<Plug name="result" type="real" oid="9491f0a5-6b19-4a58-9590-c67aa024ccb6" pathname="Rapid Prototype\specification.rgfx" layer="control_panel"/>
+					</inputs>
+				</MappingItem>
+			</mappingItems>
+		</OperatorMapping>
+	</operatorMappings>
+</MappingFile>

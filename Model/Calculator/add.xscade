@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Operator kind="function" name="Add">
+			<inputs>
+				<Variable name="Input1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="TFloat32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/713/7779/17B4/58db1f206557"/>
+					</pragmas>
+				</Variable>
+				<Variable name="Input2">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="TFloat32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/714/7779/17B4/58db1f206cd0"/>
+					</pragmas>
+				</Variable>
+			</inputs>
+			<outputs>
+				<Variable name="Output1">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="TFloat32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/715/7779/17B4/58db1f239f3"/>
+					</pragmas>
+				</Variable>
+			</outputs>
+			<locals>
+				<Variable name="_L4">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="TFloat32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/793/7779/17B4/58db224a77f8"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L5">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="TFloat32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/795/7779/17B4/58db224a47e2"/>
+					</pragmas>
+				</Variable>
+				<Variable name="_L6">
+					<type>
+						<NamedType>
+							<type>
+								<TypeRef name="float32"/>
+							</type>
+						</NamedType>
+					</type>
+					<pragmas>
+						<ed:Variable oid="!ed/79c/7779/17B4/58db224e4cc7"/>
+					</pragmas>
+				</Variable>
+			</locals>
+			<data>
+				<!-- _L4 = Input1; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L4"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="Input1"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/792/7779/17B4/58db224aeb5"/>
+					</pragmas>
+				</Equation>
+				<!-- _L5 = Input2; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L5"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="Input2"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/794/7779/17B4/58db224a7a8a"/>
+					</pragmas>
+				</Equation>
+				<!-- Output1 = _L6; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="Output1"/>
+					</lefts>
+					<right>
+						<IdExpression>
+							<path>
+								<ConstVarRef name="_L6"/>
+							</path>
+						</IdExpression>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/796/7779/17B4/58db224a628"/>
+					</pragmas>
+				</Equation>
+				<!-- _L6 = _L4 + _L5; -->
+				<Equation>
+					<lefts>
+						<VariableRef name="_L6"/>
+					</lefts>
+					<right>
+						<!-- _L4 + _L5 -->
+						<NAryOp name="1" operator="+">
+							<operands>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L4"/>
+									</path>
+								</IdExpression>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L5"/>
+									</path>
+								</IdExpression>
+							</operands>
+						</NAryOp>
+					</right>
+					<pragmas>
+						<ed:Equation oid="!ed/79b/7779/17B4/58db224e1b9"/>
+					</pragmas>
+				</Equation>
+			</data>
+			<pragmas>
+				<ed:Operator oid="!ed/6e3/7779/17B4/58db1b4b5453" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8">
+					<diagrams>
+						<NetDiagram name="Add_1" landscape="true" format="A4 (210 297)" oid="!ed/6e4/7779/17B4/58db1b4b2f3d">
+							<presentationElements>
+								<EquationGE presentable="!ed/792/7779/17B4/58db224aeb5">
+									<position>
+										<Point x="4657" y="3387"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/794/7779/17B4/58db224a7a8a">
+									<position>
+										<Point x="4763" y="5583"/>
+									</position>
+									<size>
+										<Size width="265" height="503"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/796/7779/17B4/58db224a628">
+									<position>
+										<Point x="12250" y="4419"/>
+									</position>
+									<size>
+										<Size width="318" height="502"/>
+									</size>
+								</EquationGE>
+								<EquationGE presentable="!ed/79b/7779/17B4/58db224e1b9">
+									<position>
+										<Point x="7612" y="3670"/>
+									</position>
+									<size>
+										<Size width="2000" height="2027"/>
+									</size>
+								</EquationGE>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/792/7779/17B4/58db224aeb5" dstEquation="!ed/79b/7779/17B4/58db224e1b9">
+									<positions>
+										<Point x="4932" y="3641"/>
+										<Point x="7049" y="3641"/>
+										<Point x="7049" y="4339"/>
+										<Point x="7620" y="4339"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/794/7779/17B4/58db224a7a8a" dstEquation="!ed/79b/7779/17B4/58db224e1b9">
+									<positions>
+										<Point x="5038" y="5842"/>
+										<Point x="7049" y="5842"/>
+										<Point x="7049" y="5017"/>
+										<Point x="7620" y="5017"/>
+									</positions>
+								</Edge>
+								<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/79b/7779/17B4/58db224e1b9" dstEquation="!ed/796/7779/17B4/58db224a628">
+									<positions>
+										<Point x="9610" y="4678"/>
+										<Point x="10964" y="4678"/>
+										<Point x="10964" y="4678"/>
+										<Point x="12298" y="4678"/>
+									</positions>
+								</Edge>
+							</presentationElements>
+						</NetDiagram>
+					</diagrams>
+					<references>
+						<TypeRef path="TFloat32" refOid="!ed/54d/7779/17B4/58db10fe374c"/>
+					</references>
+				</ed:Operator>
+			</pragmas>
+		</Operator>
+	</declarations>
+</File>

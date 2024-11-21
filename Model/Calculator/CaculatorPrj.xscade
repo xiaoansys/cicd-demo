@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/6" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/8" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/3">
+	<declarations>
+		<Constant name="C1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="TFloat32"/>
+					</type>
+				</NamedType>
+			</type>
+			<value>
+				<ConstValue value="-1.0"/>
+			</value>
+			<pragmas>
+				<ed:Constant oid="!ed/54c/7779/17B4/58db10d163f9"/>
+			</pragmas>
+		</Constant>
+		<Type name="TFloat32">
+			<definition>
+				<NamedType>
+					<type>
+						<TypeRef name="float32"/>
+					</type>
+				</NamedType>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/54d/7779/17B4/58db10fe374c"/>
+			</pragmas>
+		</Type>
+		<Type name="TCalculator">
+			<definition>
+				<Enum>
+					<values>
+						<Value name="ADD">
+							<pragmas>
+								<ed:Value oid="!ed/5fa/7779/17B4/58db16c41f29"/>
+								<kcg:Pragma>
+									C:enum_val 0
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="MINUS">
+							<pragmas>
+								<ed:Value oid="!ed/5fb/7779/17B4/58db16e019b3"/>
+								<kcg:Pragma>
+									C:enum_val 1
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="MULTIPLY">
+							<pragmas>
+								<ed:Value oid="!ed/5fc/7779/17B4/58db16e15081"/>
+								<kcg:Pragma>
+									C:enum_val 2
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="DIVISION">
+							<pragmas>
+								<ed:Value oid="!ed/5fd/7779/17B4/58db16e11286"/>
+								<kcg:Pragma>
+									C:enum_val 3
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="INVALID">
+							<pragmas>
+								<ed:Value oid="!ed/cd8/7779/17B4/58db4bc96a32"/>
+								<kcg:Pragma>
+									C:enum_val 4
+								</kcg:Pragma>
+								<kcg:Pragma>
+									default
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+						<Value name="MODULE">
+							<pragmas>
+								<ed:Value oid="!ed/504/5BA4/3AA4/591276307ba3"/>
+								<kcg:Pragma>
+									C:enum_val 5
+								</kcg:Pragma>
+							</pragmas>
+						</Value>
+					</values>
+				</Enum>
+			</definition>
+			<pragmas>
+				<ed:Type oid="!ed/5f9/7779/17B4/58db16a377e5"/>
+			</pragmas>
+		</Type>
+	</declarations>
+</File>
