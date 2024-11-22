@@ -31,25 +31,4 @@ jobs:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
           use-python-cache: false
 
-  doc-style:
-    name: "Documentation style"
-    runs-on: ubuntu-latest
-    steps:
-      - uses: ansys/actions/doc-style@v8
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-  doc-build:
-    name: "Build documentation"
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    needs: doc-style
-    steps:
-      - uses: ansys/actions/doc-build@v8
-        with:
-          python-version: ${{ env.MAIN_PYTHON_VERSION }}
-          skip-install: true
-          use-python-cache: false
-          dependencies: "texlive-fonts-extra qpdf"
-          check-links: false
 
