@@ -80,7 +80,7 @@ jobs:
         with:
           scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
           project: ${{env.SCADE_PROJECT_ROOT}}.etp
-          configuration:  ${{ env.CONF_CHECK }}      
+          configuration:  ${{ env.CONF_REPORT }}      
 
       - name: Upload Report
         uses: actions/upload-artifact@v3
