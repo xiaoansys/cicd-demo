@@ -31,4 +31,22 @@ jobs:
           python-version: ${{ env.MAIN_PYTHON_VERSION }}
           use-python-cache: false
 
+  build-project:
+    name: "Build Project"
+    runs-on: [self-hosted, 'xiao-laptop']
+    strategy:
+      matrix:
+        os: [windows-latest]
+        scade-version: ['24.2']
+      fail-fast: false
+    needs: [code-style]
+    steps:
+        - names: "Install Git and clone project"
+          uses: actions/checkout@v4
+        
+        - names: "Get SCADE installation directory"
+          uses: ansys/scade-actions/get-scade-dir@v2
+          id: get-scade-dir
+          with:
+            scade-version: "24.2"
 
