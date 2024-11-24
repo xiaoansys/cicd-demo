@@ -35,7 +35,7 @@ jobs:
 
   check-model:
     name: "Check model"
-    runs-on: [self-hosted, 'xiao-laptop']
+    runs-on: [self-hosted, xiao-laptop]
     strategy:
       matrix:
         os: [windows-latest]
@@ -58,9 +58,40 @@ jobs:
             scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
             project: ${{env.SCADE_PROJECT_ROOT}}.etp
             configuration:  ${{ env.CONF_CHECK }}
+    
+  report-model:
+    name: Report model
+    runs-on: [self-hosted, xiao-laptop]
+    # run this step only if the model check is successfull
+    needs: check-model
+    steps:
+      - name: "Install Git and clone project"
+        uses: actions/checkout@v4
+
+      - name: "Get SCADE installation directory"
+        uses: ansys/scade-actions/get-scade-dir@v2
+        id: get-scade-dir
+        with:
+          scade-version: "24.2"
+      
+      - name: "Generate the documentation of a SCADE Suite model"
+        uses: ansys/scade-actions/suite-report@v2
+        id: suite-report
+        with:
+          scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+          project: ${{env.SCADE_PROJECT_ROOT}}.etp
+          configuration:  ${{ env.CONF_CHECK }}      
+
+      - name: Upload Report
+        uses: actions/upload-artifact@v3
+        with:
+          name: Design Report
+          path: ${{ env.SCADE_PROJECT_ROOT }}.rtf
+          if-no-files-found: error
+          retention-days: 1
         
-        - name: "Get the Python installation installed with Ansys SCADE"
-          uses: ansys/scade-actions/get-scade-python@v2
-          id: get-scade-python
-          with:
-            scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+     #   - name: "Get the Python installation installed with Ansys SCADE"
+     #     uses: ansys/scade-actions/get-scade-python@v2
+     #     id: get-scade-python
+     #     with:
+     #       scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
