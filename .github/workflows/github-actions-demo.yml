@@ -41,10 +41,10 @@ jobs:
       fail-fast: false
     needs: [code-style]
     steps:
-        - names: "Install Git and clone project"
+        - name: "Install Git and clone project"
           uses: actions/checkout@v4
         
-        - names: "Get SCADE installation directory"
+        - name: "Get SCADE installation directory"
           uses: ansys/scade-actions/get-scade-dir@v2
           id: get-scade-dir
           with:
