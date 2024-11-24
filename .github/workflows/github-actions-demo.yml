@@ -42,9 +42,6 @@ jobs:
         scade-version: ['24.2']
       fail-fast: false
     steps:
-        - name: "Install Git and clone project"
-          uses: actions/checkout@v4
-        
         - name: "Get SCADE installation directory"
           uses: ansys/scade-actions/get-scade-dir@v2
           id: get-scade-dir
@@ -65,9 +62,6 @@ jobs:
     # run this step only if the model check is successfull
     needs: check-model
     steps:
-      - name: "Install Git and clone project"
-        uses: actions/checkout@v4
-
       - name: "Get SCADE installation directory"
         uses: ansys/scade-actions/get-scade-dir@v2
         id: get-scade-dir
@@ -83,12 +77,41 @@ jobs:
           configuration:  ${{ env.CONF_REPORT }}      
 
       - name: Upload Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Design Report
           path: ${{ env.SCADE_PROJECT_ROOT }}.rtf
           if-no-files-found: error
           retention-days: 1
+    
+  gen-code:
+    name: Generate Code
+    runs-on: [self-hosted, xiao-laptop]
+    needs: check-model
+    steps:
+      - name: "Get SCADE installation directory"
+        uses: ansys/scade-actions/get-scade-dir@v2
+        id: get-scade-dir
+        with:
+          scade-version: "24.2"
+      
+      - name: "Generate the code of a SCADE Suite model"
+        uses: ansys/scade-actions/suite-code@v2
+        id: suite-code
+        with:
+          scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+          project: ${{env.SCADE_PROJECT_ROOT}}.etp
+          configuration:  ${{ env.CONF_GEN }}      
+      
+      - name: Upload Code
+        uses: actions/upload-artifact@v4
+        with:
+          name: Generated Code
+          path: ${{ env.SCADE_PROJECT_ROOT }}_generated_code.zip
+          if-no-files-found: error
+          retention-days: 1
+
+      
         
      #   - name: "Get the Python installation installed with Ansys SCADE"
      #     uses: ansys/scade-actions/get-scade-python@v2
