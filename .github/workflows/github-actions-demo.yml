@@ -15,6 +15,17 @@ env:
   DOCUMENTATION_CNAME: 'Calculator'
   LIBRARY_NAME: 'Calculator'
   ARTIFACT_NAME: 'Calculator'
+    # SCADE project relative path without extension
+  SCADE_PROJECT_ROOT: "Model\\Calculator\\CaculatorPrj"
+  # SCADE test project relative path without extension
+  SCADE_PROJECT_TEST_ROOT: "Model\\Calculator_Test\\Calculator_Test"
+  # SCADE test result project relative path without extension
+  SCADE_PROJECT_TEST_RESULT_ROOT: "Model\\Calculator_Test\\Calculator_Test"
+  # SCADE Configurations
+  CONF_CHECK: KCG
+  CONF_REPORT: RTF
+  CONF_GEN: KCG
+  CONF_TEST: Test
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -22,8 +33,8 @@ concurrency:
 
 jobs:
 
-  build-project:
-    name: "Build Project"
+  check-model:
+    name: "Check model"
     runs-on: [self-hosted, 'xiao-laptop']
     strategy:
       matrix:
@@ -39,6 +50,14 @@ jobs:
           id: get-scade-dir
           with:
             scade-version: "24.2"
+        
+        - name: "Check a SCADE Suite model"
+          uses: ansys/scade-actions/suite-check@v2
+          id: suite-check
+          with:
+            scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+            project: ${{env.SCADE_PROJECT_ROOT}}.etp
+            configuration:  ${{ env.CONF_CHECK }}
         
         - name: "Get the Python installation installed with Ansys SCADE"
           uses: ansys/scade-actions/get-scade-python@v2
