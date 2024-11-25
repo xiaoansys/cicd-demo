@@ -1,0 +1,538 @@
+{
+  "generation_date" : "2024-11-25T14:37:44",
+  "static_info" : "C:\\Soft\\SCADE\\ESEG\\cicd-demo\\Model\\Calculator_Test_Result\\MC_Merged_Results\\Calculator_Test_Result_traceability.json",
+  "justification_files" : [ ],
+  "test_information" : [
+    "+------------------+---------------------------------------------------------------------------------------------------------------+",
+    "| Acquisition date | 2024-11-25T14:37:42                                                                                           |",
+    "| Test file        | C:\\Soft\\SCADE\\ESEG\\cicd-demo\\Model\\Calculator_Test\\Procedure1.stp                                             |",
+    "| Test operator    | Caculator                                                                                                     |",
+    "| Coverage file    | C:\\Soft\\SCADE\\ESEG\\cicd-demo\\Model\\Calculator_Test_Result\\Test_MC\\Procedure1\\Procedure1_coverage.info         |",
+    "+----+-------------+---------------------------------------------------------------------------------------------------------------+",
+    "| 01 | Record      | Record1                                                                                                       |",
+    "|    | Description | Record1                                                                                                       |",
+    "|    +-------------+---------------------------------------------------------------------------------------------------------------+",
+    "|    | Scenarios                                                                                                                   |",
+    "|    +----+------------------------------------------------------------------------------------------------------------------------+",
+    "|    | 01 | C:\\Soft\\SCADE\\ESEG\\cicd-demo\\Model\\Calculator_Test\\Cases\\Case1.sss                                                     |",
+    "+----+----+------------------------------------------------------------------------------------------------------------------------+",
+    ""
+  ],
+  "observations" : [
+    {
+      "op_path" : "Minus",
+      "c_op_name" : "Minus",
+      "mono_info" : "",
+      "status" : [
+        { "kind" : "I", "path" : "Output1=", "info" : "%(_L3)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L1=", "info" : "%(Input1)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L2=", "info" : "%(Input2)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L3=", "info" : "%(_L1 - _L2)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L3=-1", "info" : "%(_L1)% - _L2", "stat" : "O" },
+        { "kind" : "I", "path" : "_L3=-2", "info" : "_L1 - %(_L2)%", "stat" : "O" }
+      ]
+    },
+    {
+      "op_path" : "Add",
+      "c_op_name" : "Add",
+      "mono_info" : "",
+      "status" : [
+        { "kind" : "I", "path" : "Output1=", "info" : "%(_L6)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L4=", "info" : "%(Input1)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L5=", "info" : "%(Input2)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L6=", "info" : "%(_L4 + _L5)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L6=-1", "info" : "%(_L4)% + _L5", "stat" : "O" },
+        { "kind" : "I", "path" : "_L6=-2", "info" : "_L4 + %(_L5)%", "stat" : "O" }
+      ]
+    },
+    {
+      "op_path" : "Division",
+      "c_op_name" : "Division",
+      "mono_info" : "",
+      "status" : [
+        { "kind" : "I", "path" : "Output1=", "info" : "%(_L3)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L1=", "info" : "%(Input1)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L2=", "info" : "%(Input2)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L3=", "info" : "%(_L1 / _L2)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L3=-1", "info" : "%(_L1)% / _L2", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L3=-2", "info" : "_L1 / %(_L2)%", "stat" : "NO" }
+      ]
+    },
+    {
+      "op_path" : "Mod",
+      "c_op_name" : "Mod",
+      "mono_info" : "",
+      "status" : [
+        { "kind" : "I", "path" : "Output1=", "info" : "%(_L3)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L1=", "info" : "%(Input1)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L2=", "info" : "%(Input2)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L3=", "info" : "%(_L1 mod _L2)%", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L3=-1", "info" : "%(_L1)% mod _L2", "stat" : "NO" },
+        { "kind" : "I", "path" : "_L3=-2", "info" : "_L1 mod %(_L2)%", "stat" : "NO" }
+      ]
+    },
+    {
+      "op_path" : "Multiply",
+      "c_op_name" : "Multiply",
+      "mono_info" : "",
+      "status" : [
+        { "kind" : "I", "path" : "Output1=", "info" : "%(_L3)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L1=", "info" : "%(Input1)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L2=", "info" : "%(Input2)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L3=", "info" : "%(_L1 * _L2)%", "stat" : "O" },
+        { "kind" : "I", "path" : "_L3=-1", "info" : "%(_L1)% * _L2", "stat" : "O" },
+        { "kind" : "I", "path" : "_L3=-2", "info" : "_L1 * %(_L2)%", "stat" : "O" }
+      ]
+    },
+    {
+      "op_path" : "Caculator",
+      "c_op_name" : "Caculator",
+      "mono_info" : "",
+      "status" : [
+        { "kind" : "I", "path" : "Result.default", "info" : "%(0)%", "stat" : "O" },
+        { "kind" : "A", "path" : "SM1:Power_Off:", "info" : "", "stat" : "O" },
+        { "kind" : "S", "path" : "SM1:Power_Off:", "info" : "", "stat" : "O" },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_Off:<1>:?",
+          "info" : "%(Power = true)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_Off:<1>:?",
+          "info" : "%(Power = true)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_Off:<1>:?-1",
+          "info" : "%(Power)% = true",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_Off:<1>:?-1",
+          "info" : "%(Power)% = true",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_Off:<1>:?-2",
+          "info" : "Power = %(true)%",
+          "stat" : "O"
+        },
+        { "kind" : "A", "path" : "SM1:Power_On:", "info" : "", "stat" : "O" },
+        { "kind" : "S", "path" : "SM1:Power_On:", "info" : "", "stat" : "O" },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:<1>:?",
+          "info" : "%(Power = false)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:<1>:?",
+          "info" : "%(Power = false)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:<1>:?-1",
+          "info" : "%(Power)% = false",
+          "stat" : "O"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:<1>:?-1",
+          "info" : "%(Power)% = false",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:<1>:?-2",
+          "info" : "Power = %(false)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:IfBlock1:?",
+          "info" : "%(Do = ADD)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:IfBlock1:?",
+          "info" : "%(Do = ADD)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:?-1",
+          "info" : "%(Do)% = ADD",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:?-2",
+          "info" : "Do = %(ADD)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "A",
+          "path" : "SM1:Power_On:IfBlock1:then:",
+          "info" : "",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:then:Result=",
+          "info" : "%(_L1)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:then:_L1=",
+          "info" : "%(Add(_L5, _L6))%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:then:_L1=-1",
+          "info" : "Add(%(_L5)%, _L6)",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:then:_L1=-2",
+          "info" : "Add(_L5, %(_L6)%)",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:then:_L5=",
+          "info" : "%(Operand1)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:then:_L6=",
+          "info" : "%(Operand2)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:IfBlock1:else:?",
+          "info" : "%(Do = MINUS)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:IfBlock1:else:?",
+          "info" : "%(Do = MINUS)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:?-1",
+          "info" : "%(Do)% = MINUS",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:?-2",
+          "info" : "Do = %(MINUS)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "A",
+          "path" : "SM1:Power_On:IfBlock1:else:then:",
+          "info" : "",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:then:Result=",
+          "info" : "%(_L3)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:then:_L1=",
+          "info" : "%(Operand1)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:then:_L2=",
+          "info" : "%(Operand2)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:then:_L3=",
+          "info" : "%(Minus(_L1, _L2))%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:then:_L3=-1",
+          "info" : "Minus(%(_L1)%, _L2)",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else:then:_L3=-2",
+          "info" : "Minus(_L1, %(_L2)%)",
+          "stat" : "O"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:IfBlock1:else^2:?",
+          "info" : "%(Do = MULTIPLY)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:IfBlock1:else^2:?",
+          "info" : "%(Do = MULTIPLY)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:?-1",
+          "info" : "%(Do)% = MULTIPLY",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:?-2",
+          "info" : "Do = %(MULTIPLY)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "A",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:",
+          "info" : "",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:Result=",
+          "info" : "%(_L7)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:_L7=",
+          "info" : "%(Multiply(_L9, _L8))%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:_L7=-1",
+          "info" : "Multiply(%(_L9)%, _L8)",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:_L7=-2",
+          "info" : "Multiply(_L9, %(_L8)%)",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:_L8=",
+          "info" : "%(Operand2)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^2:then:_L9=",
+          "info" : "%(Operand1)%",
+          "stat" : "O"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:IfBlock1:else^3:?",
+          "info" : "%(Do = DIVISION)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:IfBlock1:else^3:?",
+          "info" : "%(Do = DIVISION)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:?-1",
+          "info" : "%(Do)% = DIVISION",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:?-2",
+          "info" : "Do = %(DIVISION)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "A",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:",
+          "info" : "",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:Result=",
+          "info" : "%(_L7)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:_L7=",
+          "info" : "%(Division(_L9, _L8))%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:_L7=-1",
+          "info" : "Division(%(_L9)%, _L8)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:_L7=-2",
+          "info" : "Division(_L9, %(_L8)%)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:_L8=",
+          "info" : "%(Operand2)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^3:then:_L9=",
+          "info" : "%(Operand1)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "T",
+          "path" : "SM1:Power_On:IfBlock1:else^4:?",
+          "info" : "%(Do = MODULE)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "F",
+          "path" : "SM1:Power_On:IfBlock1:else^4:?",
+          "info" : "%(Do = MODULE)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:?-1",
+          "info" : "%(Do)% = MODULE",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:?-2",
+          "info" : "Do = %(MODULE)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "A",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:",
+          "info" : "",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:Result=",
+          "info" : "%(_L7)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L1=",
+          "info" : "%(Operand1)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L2=",
+          "info" : "%(Operand2)%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L4=",
+          "info" : "%((_L1 : int32))%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L4=-1",
+          "info" : "(%(_L1)% : int32)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L5=",
+          "info" : "%((_L2 : int32))%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L5=-1",
+          "info" : "(%(_L2)% : int32)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L6=",
+          "info" : "%(Mod(_L4, _L5))%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L6=-1",
+          "info" : "Mod(%(_L4)%, _L5)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L6=-2",
+          "info" : "Mod(_L4, %(_L5)%)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L7=",
+          "info" : "%((_L6 : TFloat32))%",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^4:then:_L7=-1",
+          "info" : "(%(_L6)% : TFloat32)",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "A",
+          "path" : "SM1:Power_On:IfBlock1:else^5:",
+          "info" : "",
+          "stat" : "NO"
+        },
+        {
+          "kind" : "I",
+          "path" : "SM1:Power_On:IfBlock1:else^5:Result=",
+          "info" : "%(C1)%",
+          "stat" : "NO"
+        }
+      ]
+    }
+  ]
+}

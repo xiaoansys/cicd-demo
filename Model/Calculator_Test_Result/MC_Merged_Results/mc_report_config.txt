@@ -1,0 +1,1 @@
+-report -c "C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_coverage.info" -t "C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_traceability.json" -o "C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results"

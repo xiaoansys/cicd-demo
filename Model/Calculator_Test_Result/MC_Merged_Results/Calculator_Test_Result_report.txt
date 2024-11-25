@@ -1,0 +1,368 @@
+- Coverage Report -
+
+1 General information
+
+1.1 Generation
+      date: 2024-11-25T14:37:44
+      path: C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_report.txt
+
+1.2 Scade model
+      files:
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/CaculatorPrj.xscade
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/Caculator.xscade
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/add.xscade
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/minus.xscade
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/multiply.xscade
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/division.xscade
+        C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/Operator6.xscade
+      root operators:
+        Caculator
+
+1.3 Test information
+      +------------------+---------------------------------------------------------------------------------------------------------------+
+      | Acquisition date | 2024-11-25T14:37:42                                                                                           |
+      | Test file        | C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test\Procedure1.stp                                             |
+      | Test operator    | Caculator                                                                                                     |
+      | Coverage file    | C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\Test_MC\Procedure1\Procedure1_coverage.info         |
+      +----+-------------+---------------------------------------------------------------------------------------------------------------+
+      | 01 | Record      | Record1                                                                                                       |
+      |    | Description | Record1                                                                                                       |
+      |    +-------------+---------------------------------------------------------------------------------------------------------------+
+      |    | Scenarios                                                                                                                   |
+      |    +----+------------------------------------------------------------------------------------------------------------------------+
+      |    | 01 | C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test\Cases\Case1.sss                                                     |
+      +----+----+------------------------------------------------------------------------------------------------------------------------+
+      
+
+1.4 Justification files
+      -NONE-
+
+2 Criterion
+
+      OMCDC
+
+3 Coverage information
+
+3.1 Synthesis
+
+3.1.1 Measures
+
+  Rate (percentage) : 60 / 108 (55.56 %) of total
+                      60 / 108 (55.56 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |       60 |        0 |       48 |        0 |        0 |      108 |
+  ------------------------------------------------------------------------------
+
+  List of observed and justified points:
+
+3.1.2 Model
+
+  This section gives static information about the model declarations and the
+coverage points. Note the coverage points depends on the operator expansion
+directives provided by the command line or as model pragmas.
+
+      Coverage points:
+        -----------------------------
+        | coverable     :       108 |
+        | not coverable :         0 |
+        | ==========================|
+        | total         :       108 |
+        -----------------------------
+
+      Declared operators:
+                           --------------------------------------------------
+                           |         used          |           ||           |
+                           |-----------------------| not used  ||   total   |
+                           |           |    not    |           ||           |
+                           | coverable | coverable |           ||           |
+        -------------------|-----------|-----------|-----------||-----------|
+        | instrumented     |         6 |         0 |         0 ||         6 |
+        | not instrumented |         0 |         0 |         0 ||         0 |
+        | imported         |         0 |         0 |         0 ||         0 |
+        |==================|===========|===========|===========||===========|
+        | total            |         6 |         0 |         0 ||         6 |
+        ---------------------------------------------------------------------
+
+
+
+      Coverable not imported and unexpanded monomorphic instances:
+        --------------------------------
+        | instrumented     :         6 |
+        | not instrumented :         0 |
+        |==============================|
+        | total            :         6 |
+        --------------------------------
+
+3.2 Coverable not imported and unexpanded monomorphic instances:
+
+3.2.1 Top level package
+
+3.2.1.1 Add 
+    
+  Rate (percentage) : 6 / 6 (100 %) of total
+                      6 / 6 (100 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |        6 |        0 |        0 |        0 |        0 |        6 |
+  ------------------------------------------------------------------------------
+
+
+3.2.1.2 Caculator 
+    
+  Rate (percentage) : 42 / 78 (53.85 %) of total
+                      42 / 78 (53.85 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |       42 |        0 |       36 |        0 |        0 |       78 |
+  ------------------------------------------------------------------------------
+
+
+3.2.1.3 Division 
+    
+  Rate (percentage) : 0 / 6 (0.00 %) of total
+                      0 / 6 (0.00 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |        0 |        0 |        6 |        0 |        0 |        6 |
+  ------------------------------------------------------------------------------
+
+
+3.2.1.4 Minus 
+    
+  Rate (percentage) : 6 / 6 (100 %) of total
+                      6 / 6 (100 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |        6 |        0 |        0 |        0 |        0 |        6 |
+  ------------------------------------------------------------------------------
+
+
+3.2.1.5 Mod 
+    
+  Rate (percentage) : 0 / 6 (0.00 %) of total
+                      0 / 6 (0.00 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |        0 |        0 |        6 |        0 |        0 |        6 |
+  ------------------------------------------------------------------------------
+
+
+3.2.1.6 Multiply 
+    
+  Rate (percentage) : 6 / 6 (100 %) of total
+                      6 / 6 (100 %) of coverable
+  ------------------------------------------------------------------------------
+  |                     |                not observed               |          |
+  |     observed        |-------------------------------------------|          |
+  |                     |      coverable      |   not coverable     |   total  |
+  |---------------------|---------------------|---------------------|          |
+  | justified| not just.| justified| not just.| justified| not just.|          |
+  |----------|----------|----------|----------|----------|----------|----------|
+  |        0 |        6 |        0 |        0 |        0 |        0 |        6 |
+  ------------------------------------------------------------------------------
+
+
+3.3 Not coverable used and instrumented declared operators
+
+      -NONE-
+
+3.4 Not used declared operators
+
+      -NONE-
+
+3.5 Used and not instrumented declared operators
+
+      -NONE-
+
+3.6 Coverage details per not imported and unexpanded monomorphic instances
+
+3.6.1 Top level package
+
+3.6.1.1 Add 
+
+--------------------------------------------------------------------------------
+Structural points:
+--------------------------------------------------------------------------------
+OBSERVED         INFLUENCE            Output1=
+OBSERVED         INFLUENCE            _L4=
+OBSERVED         INFLUENCE            _L5=
+OBSERVED         INFLUENCE            _L6=
+OBSERVED         INFLUENCE            _L6=-1
+OBSERVED         INFLUENCE            _L6=-2
+--------------------------------------------------------------------------------
+
+
+3.6.1.2 Caculator 
+
+--------------------------------------------------------------------------------
+Structural points:
+--------------------------------------------------------------------------------
+OBSERVED         INFLUENCE            Result.default
+OBSERVED         ACTIVE               SM1:Power_Off:
+OBSERVED         SELECTED             SM1:Power_Off:
+OBSERVED         TRUE                 SM1:Power_Off:<1>:?
+OBSERVED         FALSE                SM1:Power_Off:<1>:?
+NOT OBSERVED     TRUE                 SM1:Power_Off:<1>:?-1
+NOT OBSERVED     FALSE                SM1:Power_Off:<1>:?-1
+OBSERVED         INFLUENCE            SM1:Power_Off:<1>:?-2
+OBSERVED         ACTIVE               SM1:Power_On:
+OBSERVED         SELECTED             SM1:Power_On:
+NOT OBSERVED     TRUE                 SM1:Power_On:<1>:?
+OBSERVED         FALSE                SM1:Power_On:<1>:?
+OBSERVED         TRUE                 SM1:Power_On:<1>:?-1
+NOT OBSERVED     FALSE                SM1:Power_On:<1>:?-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:<1>:?-2
+OBSERVED         TRUE                 SM1:Power_On:IfBlock1:?
+OBSERVED         FALSE                SM1:Power_On:IfBlock1:?
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:?-1
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:?-2
+OBSERVED         ACTIVE               SM1:Power_On:IfBlock1:then:
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:then:Result=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:then:_L1=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:then:_L1=-1
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:then:_L1=-2
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:then:_L5=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:then:_L6=
+OBSERVED         TRUE                 SM1:Power_On:IfBlock1:else:?
+OBSERVED         FALSE                SM1:Power_On:IfBlock1:else:?
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:?-1
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:?-2
+OBSERVED         ACTIVE               SM1:Power_On:IfBlock1:else:then:
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:then:Result=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:then:_L1=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:then:_L2=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:then:_L3=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:then:_L3=-1
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else:then:_L3=-2
+OBSERVED         TRUE                 SM1:Power_On:IfBlock1:else^2:?
+NOT OBSERVED     FALSE                SM1:Power_On:IfBlock1:else^2:?
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:?-1
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:?-2
+OBSERVED         ACTIVE               SM1:Power_On:IfBlock1:else^2:then:
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:then:Result=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:then:_L7=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:then:_L7=-1
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:then:_L7=-2
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:then:_L8=
+OBSERVED         INFLUENCE            SM1:Power_On:IfBlock1:else^2:then:_L9=
+NOT OBSERVED     TRUE                 SM1:Power_On:IfBlock1:else^3:?
+NOT OBSERVED     FALSE                SM1:Power_On:IfBlock1:else^3:?
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:?-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:?-2
+NOT OBSERVED     ACTIVE               SM1:Power_On:IfBlock1:else^3:then:
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:then:Result=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:then:_L7=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:then:_L7=-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:then:_L7=-2
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:then:_L8=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^3:then:_L9=
+NOT OBSERVED     TRUE                 SM1:Power_On:IfBlock1:else^4:?
+NOT OBSERVED     FALSE                SM1:Power_On:IfBlock1:else^4:?
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:?-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:?-2
+NOT OBSERVED     ACTIVE               SM1:Power_On:IfBlock1:else^4:then:
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:Result=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L1=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L2=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L4=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L4=-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L5=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L5=-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L6=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L6=-1
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L6=-2
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L7=
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^4:then:_L7=-1
+NOT OBSERVED     ACTIVE               SM1:Power_On:IfBlock1:else^5:
+NOT OBSERVED     INFLUENCE            SM1:Power_On:IfBlock1:else^5:Result=
+--------------------------------------------------------------------------------
+
+
+3.6.1.3 Division 
+
+--------------------------------------------------------------------------------
+Structural points:
+--------------------------------------------------------------------------------
+NOT OBSERVED     INFLUENCE            Output1=
+NOT OBSERVED     INFLUENCE            _L1=
+NOT OBSERVED     INFLUENCE            _L2=
+NOT OBSERVED     INFLUENCE            _L3=
+NOT OBSERVED     INFLUENCE            _L3=-1
+NOT OBSERVED     INFLUENCE            _L3=-2
+--------------------------------------------------------------------------------
+
+
+3.6.1.4 Minus 
+
+--------------------------------------------------------------------------------
+Structural points:
+--------------------------------------------------------------------------------
+OBSERVED         INFLUENCE            Output1=
+OBSERVED         INFLUENCE            _L1=
+OBSERVED         INFLUENCE            _L2=
+OBSERVED         INFLUENCE            _L3=
+OBSERVED         INFLUENCE            _L3=-1
+OBSERVED         INFLUENCE            _L3=-2
+--------------------------------------------------------------------------------
+
+
+3.6.1.5 Mod 
+
+--------------------------------------------------------------------------------
+Structural points:
+--------------------------------------------------------------------------------
+NOT OBSERVED     INFLUENCE            Output1=
+NOT OBSERVED     INFLUENCE            _L1=
+NOT OBSERVED     INFLUENCE            _L2=
+NOT OBSERVED     INFLUENCE            _L3=
+NOT OBSERVED     INFLUENCE            _L3=-1
+NOT OBSERVED     INFLUENCE            _L3=-2
+--------------------------------------------------------------------------------
+
+
+3.6.1.6 Multiply 
+
+--------------------------------------------------------------------------------
+Structural points:
+--------------------------------------------------------------------------------
+OBSERVED         INFLUENCE            Output1=
+OBSERVED         INFLUENCE            _L1=
+OBSERVED         INFLUENCE            _L2=
+OBSERVED         INFLUENCE            _L3=
+OBSERVED         INFLUENCE            _L3=-1
+OBSERVED         INFLUENCE            _L3=-2
+--------------------------------------------------------------------------------
+
+
+- End of Report. -

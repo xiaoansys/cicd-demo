@@ -1,0 +1,57 @@
+{
+  "criterion" : "OMCDC",
+  "model_input_files" : [
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/CaculatorPrj.xscade",
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/Caculator.xscade",
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/add.xscade",
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/minus.xscade",
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/multiply.xscade",
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/division.xscade",
+    "C:/Soft/SCADE/ESEG/cicd-demo/Model/Calculator/Operator6.xscade"
+  ],
+  "root_operators" : [ "Caculator" ],
+  "operators" : [
+    {
+      "op_path" : "Caculator",
+      "used" : true,
+      "imported" : false,
+      "instrumented" : true,
+      "monomorphic_instances" : [ { "mono_info" : "", "tra_file" : "Caculator.tra" } ]
+    },
+    {
+      "op_path" : "Multiply",
+      "used" : true,
+      "imported" : false,
+      "instrumented" : true,
+      "monomorphic_instances" : [ { "mono_info" : "", "tra_file" : "Multiply.tra" } ]
+    },
+    {
+      "op_path" : "Mod",
+      "used" : true,
+      "imported" : false,
+      "instrumented" : true,
+      "monomorphic_instances" : [ { "mono_info" : "", "tra_file" : "Mod.tra" } ]
+    },
+    {
+      "op_path" : "Division",
+      "used" : true,
+      "imported" : false,
+      "instrumented" : true,
+      "monomorphic_instances" : [ { "mono_info" : "", "tra_file" : "Division.tra" } ]
+    },
+    {
+      "op_path" : "Add",
+      "used" : true,
+      "imported" : false,
+      "instrumented" : true,
+      "monomorphic_instances" : [ { "mono_info" : "", "tra_file" : "Add.tra" } ]
+    },
+    {
+      "op_path" : "Minus",
+      "used" : true,
+      "imported" : false,
+      "instrumented" : true,
+      "monomorphic_instances" : [ { "mono_info" : "", "tra_file" : "Minus.tra" } ]
+    }
+  ]
+}

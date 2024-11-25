@@ -1,0 +1,33 @@
+# ========================================
+# Introduced tags ...: 6
+# Not coverable tags : 0
+# Support size ......: 1
+# ========================================
+
+[d24ac004fd4e1fe2c91d95244d5b03971c7efd147ba583b644e12a0500d51adf]
+
+
+LOCAL @5
+
+ALIASES
+
+@5 "Mod"
+
+TAGS
+
+I 388  "@5/_L3="  "%(_L1 mod _L2)%"
+I 387  "@5/_L3=-2"  "_L1 mod %(_L2)%"
+I 386  "@5/_L3=-1"  "%(_L1)% mod _L2"
+I 385  "@5/_L2="  "%(Input2)%"
+I 384  "@5/_L1="  "%(Input1)%"
+I 0  "@5/Output1="  "%(_L3)%"
+
+SUPPORTS
+
+388  { 0 }
+387  { 0 }
+386  { 0 }
+385  { 0 }
+384  { 0 }
+
+NOT COVERABLE {  }
