@@ -44,7 +44,7 @@ jobs:
     strategy:
       matrix:
         os: [windows-latest]
-        scade-version: ['${{ env.SCADE_VERSION }}']
+        scade-version: ['24.2']
       fail-fast: false
     steps:
         - name: "Get SCADE installation directory"
