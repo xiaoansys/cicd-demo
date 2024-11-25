@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Model Coverage summary</title>
+    <style>
+  table {
+    border-collapse: collapse;
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .table_cov,.th_cov,.td_cov_counter,.td_cov_operator {
+    border: 1px solid black;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    vertical-align:middle;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 9pt;
+    min-height: 0.5cm;
+    height: 0.5cm;
+    padding-left: 0.1cm;
+    padding-right: 0.1cm;
+  }
+ 
+  .th_cov { 
+    color: rgb(0,0,0);
+    background-color: rgb(217,226,255);
+    font-weight: bold;
+    padding-left: 0.1cm;
+  }
+  .td_cov_counter { 
+
+  }
+  .td_cov_operator { 
+    padding-left: 0.1cm;
+    padding-right: 0.1cm;
+    text-align: left;
+    color: rgb(0,0,255);
+    font-weight: bold;
+  }
+
+  table_info {
+    border-style:none;
+  }
+  .info_value{
+    color: rgb(0,75,0);
+    font-family: Verdana;
+    font-size: 9pt;
+    padding-left: 0.1cm;
+  }
+  .info_label{ 
+    color: rgb(0,0,128);
+    font-family: Verdana;
+    font-size: 9pt;
+    font-weight: bold;
+    width: 240px;
+  }
+
+  body{
+    background: white;
+    counter-reset: h2
+    margin: 2%;
+    width:80%;
+    color:black;
+  }
+  body{counter-reset: h2}
+  h1 {text-align:center; margin: 0 auto 4% auto;}
+  h2 {counter-reset: h3}
+  h3 {counter-reset: h4}
+  h2:before {counter-increment: h2; content: counter(h2) ". "}
+  h3:before {counter-increment: h3; content: counter(h2) "." counter(h3) ". "}
+  h2{
+    border-bottom: 1px solid black;
+    margin-top: 3%;
+  }
+</style>
+  </head>
+  <body>
+    <h1>Model Coverage summary</h1>
+    <table class="table_info">
+      <tr>
+        <td class="info_label">Date:</td>
+        <td class="info_value">2024-11-25T14:37:44</td>
+      </tr>
+      <tr>
+        <td class="info_label">Project:</td>
+        <td class="info_value">C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator\CaculatorPrj.etp</td>
+      </tr>
+      <tr>
+        <td class="info_label">Root Operators:</td>
+        <td class="info_value">Caculator<br /></td>
+      </tr>
+      <tr>
+        <td class="info_label">Criterion:</td>
+        <td class="info_value">OMCDC</td>
+      </tr>
+      <tr>
+        <td class="info_label">Test information:</td>
+        <td class="info_value">
+          <pre>+------------------+---------------------------------------------------------------------------------------------------------------+<br />| Acquisition date | 2024-11-25T14:37:42                                                                                           |<br />| Test file        | C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test\Procedure1.stp                                             |<br />| Test operator    | Caculator                                                                                                     |<br />| Coverage file    | C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\Test_MC\Procedure1\Procedure1_coverage.info         |<br />+----+-------------+---------------------------------------------------------------------------------------------------------------+<br />| 01 | Record      | Record1                                                                                                       |<br />|    | Description | Record1                                                                                                       |<br />|    +-------------+---------------------------------------------------------------------------------------------------------------+<br />|    | Scenarios                                                                                                                   |<br />|    +----+------------------------------------------------------------------------------------------------------------------------+<br />|    | 01 | C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test\Cases\Case1.sss                                                     |<br />+----+----+------------------------------------------------------------------------------------------------------------------------+<br /><br /></pre>
+        </td>
+      </tr>
+      <tr>
+        <td class="info_label">Justification files:</td>
+        <td class="info_value"></td>
+      </tr>
+      <tr>
+        <td class="info_value">
+          <br />
+        </td>
+        <td class="info_value">
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td class="info_value">
+          <br />
+        </td>
+        <td class="info_value">
+          <br />
+        </td>
+      </tr>
+      <tr>
+        <td class="info_label">Textual report file:</td>
+        <td class="info_value">
+          <a href="C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_report.txt">C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_report.txt</a>
+        </td>
+      </tr>
+      <tr>
+        <td class="info_label">Covered or justified / Total:</td>
+        <td class="info_value">60 / 108 (55.56 %)</td>
+      </tr>
+      <tr>
+        <td class="info_label">Covered or justified / Coverable:</td>
+        <td class="info_value">60 / 108 (55.56 %)</td>
+      </tr>
+    </table>
+    <br />
+    <br />
+    <table class="table_cov">
+      <tr>
+        <th class="th_cov" rowspan="3" colspan="1">Operator</th>
+        <th class="th_cov" rowspan="2" colspan="2">Observed</th>
+        <th class="th_cov" colspan="4">Not observed</th>
+        <th class="th_cov" rowspan="3">Total</th>
+        <th class="th_cov" rowspan="3">% of total</th>
+        <th class="th_cov" rowspan="3">% of coverable</th>
+      </tr>
+      <tr>
+        <th class="th_cov" colspan="2">Coverable</th>
+        <th class="th_cov" colspan="2">Not coverable</th>
+      </tr>
+      <tr>
+        <th class="th_cov">Justified</th>
+        <th class="th_cov">Not justified</th>
+        <th class="th_cov">Justified</th>
+        <th class="th_cov">Not justified</th>
+        <th class="th_cov">Justified</th>
+        <th class="th_cov">Not justified</th>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Add </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">100.00 %</td>
+        <td class="td_cov_counter">100.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Caculator </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">42</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">36</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">78</td>
+        <td class="td_cov_counter">53.85 %</td>
+        <td class="td_cov_counter">53.85 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Division </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0.00 %</td>
+        <td class="td_cov_counter">0.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Minus </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">100.00 %</td>
+        <td class="td_cov_counter">100.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Mod </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0.00 %</td>
+        <td class="td_cov_counter">0.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Multiply </td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">6</td>
+        <td class="td_cov_counter">100.00 %</td>
+        <td class="td_cov_counter">100.00 %</td>
+      </tr>
+      <tr>
+        <td class="td_cov_operator">Total</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">60</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">48</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">0</td>
+        <td class="td_cov_counter">108</td>
+        <td class="td_cov_counter">55.56 %</td>
+        <td class="td_cov_counter">55.56 %</td>
+      </tr>
+    </table>
+  </body>
+</html>

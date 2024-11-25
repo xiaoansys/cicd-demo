@@ -1,0 +1,41 @@
+##############################################################################
+#
+# Scenario Description
+#
+##############################################################################
+
+## inputs
+# float32
+SSM::set Caculator/Operand1 2.0
+# float32
+SSM::set Caculator/Operand2 3.0
+# bool
+SSM::set Caculator/Power false
+# TCalculator
+SSM::set Caculator/Do ADD
+## outputs
+# float32
+SSM::check Caculator/Result 0.0
+SSM::cycle 
+
+# bool
+SSM::set Caculator/Power True
+## outputs
+# float32
+SSM::check Caculator/Result 5.0
+SSM::cycle 
+
+# TCalculator
+SSM::set Caculator/Do MINUS
+## outputs
+# float32
+SSM::check Caculator/Result -1.0
+SSM::cycle 
+
+# TCalculator
+SSM::set Caculator/Do MULTIPLY
+## outputs
+# float32
+SSM::check Caculator/Result 6.0
+SSM::cycle 
+

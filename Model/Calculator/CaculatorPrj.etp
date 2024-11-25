@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="227" defaultConfiguration="24">
+<Project id="1" oid_count="228" defaultConfiguration="24">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -691,6 +691,10 @@
 			<value>SCADE_M012</value>
 			<configuration>217</configuration>
 		</Prop>
+		<Prop id="228" name="@GENERATOR:ROOTNODE">
+			<value>Caculator</value>
+			<configuration>46</configuration>
+		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries"/>
@@ -707,16 +711,8 @@
 			</elements>
 		</Folder>
 		<Folder id="136" extensions="scts" name="Timing and Stack"/>
-		<Folder id="152" extensions="etp" name="Graphical Panels">
-			<elements>
-				<FileRef id="153" persistAs="Rapid Prototype\CalculatorPrototype.etp"/>
-			</elements>
-		</Folder>
-		<Folder id="154" extensions="sdy" name="Graphical Panels Mapping File">
-			<elements>
-				<FileRef id="155" persistAs="CaculatorPrj.sdy"/>
-			</elements>
-		</Folder>
+		<Folder id="152" extensions="etp" name="Graphical Panels"/>
+		<Folder id="154" extensions="sdy" name="Graphical Panels Mapping File"/>
 		<FileRef id="215" persistAs="CaculatorPrj.cdf"/>
 	</roots>
 	<configurations>

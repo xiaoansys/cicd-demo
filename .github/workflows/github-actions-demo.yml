@@ -20,7 +20,7 @@ env:
   # SCADE test project relative path without extension
   SCADE_PROJECT_TEST_ROOT: "Model\\Calculator_Test\\Calculator_Test"
   # SCADE test result project relative path without extension
-  SCADE_PROJECT_TEST_RESULT_ROOT: "Model\\Calculator_Test\\Calculator_Test"
+  SCADE_PROJECT_TEST_RESULT_ROOT: "Model\\Calculator_Test_Result\\Calculator_Test_Result"
   # SCADE Configurations
   CONF_CHECK: KCG
   CONF_REPORT: RTF

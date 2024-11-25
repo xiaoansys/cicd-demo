@@ -14,9 +14,13 @@
 model/scade-display/DisplayPanel/
 model/scade-display/DisplayPanel_Simulation/
 model/scade-display/DisplayPanel_Exe/
-model/scade-test/Test_TEE/
+model/Calculator_Test/Test_TEE/
+model/Calculator_Test_Result/Test_TEE/
+model/Calculator_Test_Result/Test_MC/
+model/Calculator_Test_Result/MC_Merged_Results/
 Model/Calculator/KCG/
 Model/Calculator/Simulation/
+Model/Calculator/Coverage
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
