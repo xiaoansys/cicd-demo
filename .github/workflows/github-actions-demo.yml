@@ -116,7 +116,7 @@ jobs:
     name: Simulation Build
     runs-on: [self-hosted, xiao-laptop]
     needs: check-model
-    step:
+    steps:
     - name: "Get SCADE installation directory"
       uses: ansys/scade-actions/get-scade-dir@v2
       id: get-scade-dir
