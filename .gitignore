@@ -2,7 +2,7 @@
 *.log
 *.dll
 *.exe
-*.htm
+#*.htm
 *.ewo
 *.vsw
 *.mccache
