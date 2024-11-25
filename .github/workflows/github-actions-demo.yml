@@ -26,6 +26,7 @@ env:
   CONF_REPORT: RTF
   CONF_GEN: KCG
   CONF_TEST: Test
+  CONF_SIM: Simulation
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -110,6 +111,28 @@ jobs:
           path: "${{ steps.suite-code.outputs.target-directory }}/*.*"
           retention-days: 7
           if-no-files-found: error
+    
+  simulation-build:
+    name: Simulation Build
+    runs-on: [self-hosted, xiao-laptop]
+    needs: check-model
+    step:
+    - name: "Get SCADE installation directory"
+      uses: ansys/scade-actions/get-scade-dir@v2
+      id: get-scade-dir
+      with:
+        scade-version: "24.2"
+      
+    - name: "Generate the code of a SCADE Suite model"
+      uses: ansys/scade-actions/suite-code@v2
+      id: suite-sim-build
+      with:
+        scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+        project: ${{env.SCADE_PROJECT_ROOT}}.etp
+        configuration:  ${{ env.CONF_SIM }}
+        build: "true"
+        checkout: false          
+
 
       
         
