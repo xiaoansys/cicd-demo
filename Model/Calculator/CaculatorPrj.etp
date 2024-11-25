@@ -706,73 +706,7 @@
 				<FileRef id="141" persistAs="Operator6.xscade"/>
 			</elements>
 		</Folder>
-		<Folder id="136" extensions="scts" name="Timing and Stack">
-			<elements>
-				<FileRef id="137" persistAs="Timing and Stack.scts">
-					<props>
-						<Prop id="138" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="139" persistAs="Timing and Stack_1.scts">
-					<props>
-						<Prop id="140" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="146" persistAs="Timing and Stack_2.scts">
-					<props>
-						<Prop id="147" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="148" persistAs="Timing and Stack_3.scts">
-					<props>
-						<Prop id="149" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="150" persistAs="Timing and Stack_4.scts">
-					<props>
-						<Prop id="151" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="196" persistAs="Timing and Stack_5.scts">
-					<props>
-						<Prop id="197" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="198" persistAs="Timing and Stack_6.scts">
-					<props>
-						<Prop id="199" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="200" persistAs="Timing and Stack_7.scts">
-					<props>
-						<Prop id="201" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-				<FileRef id="202" persistAs="Timing and Stack_8.scts">
-					<props>
-						<Prop id="203" name="@SCTS:TOOL">
-							<value>T&amp;S Verifier</value>
-						</Prop>
-					</props>
-				</FileRef>
-			</elements>
-		</Folder>
+		<Folder id="136" extensions="scts" name="Timing and Stack"/>
 		<Folder id="152" extensions="etp" name="Graphical Panels">
 			<elements>
 				<FileRef id="153" persistAs="Rapid Prototype\CalculatorPrototype.etp"/>

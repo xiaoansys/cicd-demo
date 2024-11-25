@@ -144,6 +144,22 @@ jobs:
       id: get-scade-dir
       with:
         scade-version: "24.2"
+
+    - name: "Check custom rules with suite-rules"
+      uses: ansys/scade-actions/suite-rules@v2
+      id: suite-rules
+      with:
+        scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+        project: ${{env.SCADE_PROJECT_ROOT}}.etp
+        configuration: ${{ env.CONF_RULES }}        
+    
+    - name: "Upload Custom rules report artifacts"
+      uses: actions/upload-artifact@v4
+      with:
+        name: "check-custom-rules"
+        path: "${{ steps.suite-rules.outputs.report }}"
+        retention-days: 7
+        if-no-files-found: error
     
     - name: "Compute metrics with suite-metrics"
       uses: ansys/scade-actions/suite-metrics@v2
@@ -161,21 +177,7 @@ jobs:
         retention-days: 7
         if-no-files-found: error
     
-    - name: "Check custom rules with suite-rules"
-      uses: ansys/scade-actions/suite-rules@v2
-      id: suite-rules
-      with:
-        scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
-        project: ${{env.SCADE_PROJECT_ROOT}}.etp
-        configuration: ${{ env.CONF_RULES }}        
-    
-    - name: "Upload Custom rules report artifacts"
-      uses: actions/upload-artifact@v4
-      with:
-        name: "check-custom-rules"
-        path: "${{ steps.suite-rules.outputs.report }}"
-        retention-days: 7
-        if-no-files-found: error
+
 
       
         
