@@ -12,6 +12,7 @@ on:
 
 env:
   MAIN_PYTHON_VERSION: '3.10'
+  SCADE_VERSION: '24.2'
   DOCUMENTATION_CNAME: 'Calculator'
   LIBRARY_NAME: 'Calculator'
   ARTIFACT_NAME: 'Calculator'
@@ -50,7 +51,7 @@ jobs:
           uses: ansys/scade-actions/get-scade-dir@v2
           id: get-scade-dir
           with:
-            scade-version: "24.2"
+            scade-version: ${{ env.SCADE_VERSION }}
         
         - name: "Check a SCADE Suite model"
           uses: ansys/scade-actions/suite-check@v2
@@ -70,7 +71,7 @@ jobs:
         uses: ansys/scade-actions/get-scade-dir@v2
         id: get-scade-dir
         with:
-          scade-version: "24.2"
+          scade-version: ${{ env.SCADE_VERSION }}
       
       - name: "Generate the documentation of a SCADE Suite model"
         uses: ansys/scade-actions/suite-report@v2
@@ -97,7 +98,7 @@ jobs:
         uses: ansys/scade-actions/get-scade-dir@v2
         id: get-scade-dir
         with:
-          scade-version: "24.2"
+          scade-version: ${{ env.SCADE_VERSION }}
       
       - name: "Generate the code of a SCADE Suite model"
         uses: ansys/scade-actions/suite-code@v2
@@ -124,7 +125,7 @@ jobs:
       uses: ansys/scade-actions/get-scade-dir@v2
       id: get-scade-dir
       with:
-        scade-version: "24.2"
+        scade-version: ${{ env.SCADE_VERSION }}
       
     - name: "Generate the code of a SCADE Suite model"
       uses: ansys/scade-actions/suite-code@v2
@@ -144,7 +145,7 @@ jobs:
       uses: ansys/scade-actions/get-scade-dir@v2
       id: get-scade-dir
       with:
-        scade-version: "24.2"
+        scade-version: ${{ env.SCADE_VERSION }}
 
     - name: "Compute metrics with suite-metrics"
       uses: ansys/scade-actions/suite-metrics@v2
@@ -187,7 +188,7 @@ jobs:
       uses: ansys/scade-actions/get-scade-dir@v2
       id: get-scade-dir
       with:
-        scade-version: "24.2"  
+        scade-version: ${{ env.SCADE_VERSION }}
     
     - name: "Run the tests with test-execution"
       uses: ansys/scade-actions/test-execute@v2
