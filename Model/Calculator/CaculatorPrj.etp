@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="218" defaultConfiguration="24">
+<Project id="1" oid_count="227" defaultConfiguration="24">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -40,10 +40,6 @@
 		</Prop>
 		<Prop id="20" name="@GENERATOR:USER_CONFIG">
 			<value>$(TargetDir)\user_macros.h</value>
-			<configuration>14</configuration>
-		</Prop>
-		<Prop id="21" name="@GENERATOR:ENABLE_EXTENSIONS">
-			<value>false</value>
 			<configuration>14</configuration>
 		</Prop>
 		<Prop id="22" name="@SIMULATOR:CPU_TYPE">
@@ -638,17 +634,62 @@
 			<value>156</value>
 			<value>173</value>
 		</Prop>
+		<Prop id="216" name="@STUDIO:TOOLCONF">
+			<value>Metrics and Rules Checker</value>
+			<value>217</value>
+			<value>221</value>
+			<value>223</value>
+		</Prop>
+		<Prop id="218" name="@METRICS_RULES:USER_DEF_FILES">
+			<value>$(SCADE)/scripts/MetricRule/DefaultMetrics.py</value>
+			<value>..\..\..\scade-actions\tests\suite-rules\Model\rules.py</value>
+		</Prop>
 		<Prop id="214" name="@GENERATOR:TARGET_ADAPTOR">
 			<value></value>
 			<configuration>14</configuration>
 		</Prop>
-		<Prop id="216" name="@STUDIO:TOOLCONF">
-			<value>Metrics and Rules Checker</value>
-			<value>217</value>
+		<Prop id="21" name="@GENERATOR:ENABLE_EXTENSIONS">
+			<value>false</value>
+			<configuration>14</configuration>
 		</Prop>
-		<Prop id="218" name="@METRICS_RULES:USER_DEF_FILES">
-			<value>$(SCADE)/scripts/MetricRule/DefaultMetrics.py</value>
-			<value>$(SCADE)/scripts/MetricRule/DefaultRules.py</value>
+		<Prop id="219" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>CaculatorPrj</value>
+			<configuration>217</configuration>
+		</Prop>
+		<Prop id="222" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>CaculatorPrj</value>
+			<configuration>221</configuration>
+		</Prop>
+		<Prop id="224" name="@METRICS_RULES:SELECTED_ROOTS">
+			<value>CaculatorPrj</value>
+			<configuration>223</configuration>
+		</Prop>
+		<Prop id="225" name="@METRICS_RULES:SELECTED_RULES">
+			<value>ID_SUCCESS</value>
+			<configuration>221</configuration>
+		</Prop>
+		<Prop id="226" name="@METRICS_RULES:SELECTED_RULES">
+			<value>ID_FAILURE</value>
+			<configuration>223</configuration>
+		</Prop>
+		<Prop id="227" name="@METRICS_RULES:SELECTED_METRICS">
+			<value>SCADE_M004</value>
+			<value>SCADE_M013</value>
+			<value>SCADE_M007</value>
+			<value>SCADE_M010</value>
+			<value>SCADE_M006</value>
+			<value>SCADE_M011</value>
+			<value>SCADE_M001</value>
+			<value>SCADE_M016</value>
+			<value>SCADE_M003</value>
+			<value>SCADE_M014</value>
+			<value>SCADE_M002</value>
+			<value>SCADE_M015</value>
+			<value>SCADE_M009</value>
+			<value>SCADE_M008</value>
+			<value>SCADE_M005</value>
+			<value>SCADE_M012</value>
+			<configuration>217</configuration>
 		</Prop>
 	</props>
 	<roots>
@@ -757,5 +798,7 @@
 		<Configuration id="156" name="Rapid Prototyping"/>
 		<Configuration id="173" name="Standalone Executable"/>
 		<Configuration id="217" name="MetricRule"/>
+		<Configuration id="221" name="RuleSuccess"/>
+		<Configuration id="223" name="RuleFailure"/>
 	</configurations>
 </Project>
