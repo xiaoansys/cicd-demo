@@ -243,7 +243,7 @@ jobs:
         checkout: false
     
     - name: "Execute pyproject tests"
-      ueses: ansys/scade-actions/scade-tests-pytest@v2
+      uses: ansys/scade-actions/scade-tests-pytest@v2
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-pyproject"
