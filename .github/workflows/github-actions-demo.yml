@@ -41,6 +41,7 @@ jobs:
   check-model:
     name: "Check model"
     runs-on: [self-hosted, xiao-laptop]
+    needs: python-test
     strategy:
       matrix:
         os: [windows-latest]
@@ -226,9 +227,14 @@ jobs:
         if-no-files-found: error   
 
       
-        
-     #   - name: "Get the Python installation installed with Ansys SCADE"
-     #     uses: ansys/scade-actions/get-scade-python@v2
-     #     id: get-scade-python
-     #     with:
-     #       scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+  python-tests:
+    -name: "Python Tests"   
+    runs-on: [self-hosted, xiao-laptop]
+    steps:
+      - name: "Execute setup.py tests"
+      uses: ansys/scade-action/scade-tests-pytest@v2
+      with:
+        scade-version: ${{ env.SCADE_VERSION }}
+        library-dir: "python-test/python-setup"
+        pytest-postargs: "python-test/python-setup/tests -vv"  
+    
