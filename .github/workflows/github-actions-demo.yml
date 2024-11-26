@@ -41,7 +41,7 @@ jobs:
   check-model:
     name: "Check model"
     runs-on: [self-hosted, xiao-laptop]
-    needs: python-test
+    needs: python-tests
     strategy:
       matrix:
         os: [windows-latest]
