@@ -1,0 +1,9 @@
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\qtelauncher_CMD.log
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\mc_report_config.txt
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_report.json
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\mc_report.log
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\Calculator_Test_Result_report.txt
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\Calculator_Test_Result.mccache
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\Calculator_Test_Result_mcsummary.html
+C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\Calculator_Test_Result.mcorder
+GLOBAL_LOG:C:\Soft\SCADE\ESEG\cicd-demo\Model\Calculator_Test_Result\MC_Merged_Results\qtelauncher.log
