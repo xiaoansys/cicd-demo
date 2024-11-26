@@ -236,5 +236,8 @@ jobs:
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-setup"
-        pytest-postargs: "python-test/python-setup/tests -vv"  
+        pytest-postargs: "python-test/python-setup/tests -vv"
+        checkout: false
+    
+
     
