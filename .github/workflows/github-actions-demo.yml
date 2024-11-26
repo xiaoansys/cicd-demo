@@ -119,7 +119,7 @@ jobs:
   simulation-build:
     name: Simulation Build
     runs-on: [self-hosted, xiao-laptop]
-    needs: code-gen
+    needs: gen-code
     steps:
     - name: "Get SCADE installation directory"
       uses: ansys/scade-actions/get-scade-dir@v2
@@ -229,7 +229,7 @@ jobs:
   python-tests:
     name: "Python Tests"   
     runs-on: [self-hosted, xiao-laptop]
-    needs: code-gen
+    needs: gen-code
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4  
