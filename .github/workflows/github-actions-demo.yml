@@ -242,5 +242,14 @@ jobs:
         pytest-postargs: "python-test/python-setup/tests -vv"
         checkout: false
     
+    - name: "Execute pyproject tests"
+      ueses: ansys/scade-actions/scade-tests-pytest@v2
+      with:
+        scade-version: ${{ env.SCADE_VERSION }}
+        library-dir: "python-test/python-pyproject"
+        pytest-postargs: "python-test/python-pyproject/tests -vv"
+        checkout: false
+    
+      
 
     
