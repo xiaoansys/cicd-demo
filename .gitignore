@@ -19,7 +19,8 @@ model/Calculator_Test_Result/Test_TEE/
 model/Calculator_Test_Result/Test_MC/
 Model/Calculator/KCG/
 Model/Calculator/Simulation/
-Model/Calculator/Coverage
+Model/Calculator/Coverage/
+Model/Calculator/Python_DLL_Build/
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
