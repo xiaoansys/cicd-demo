@@ -228,7 +228,7 @@ jobs:
 
       
   python-tests:
-    -name: "Python Tests"   
+    name: "Python Tests"   
     runs-on: [self-hosted, xiao-laptop]
     steps:
       - name: "Execute setup.py tests"
