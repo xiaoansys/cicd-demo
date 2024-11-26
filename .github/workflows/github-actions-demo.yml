@@ -232,7 +232,7 @@ jobs:
     runs-on: [self-hosted, xiao-laptop]
     steps:
     - name: "Execute setup.py tests"
-      uses: ansys/scade-action/scade-tests-pytest@v2
+      uses: ansys/scade-actions/scade-tests-pytest@v2
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-setup"
