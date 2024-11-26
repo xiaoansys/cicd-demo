@@ -36,7 +36,7 @@ from test_package import script
 @pytest.fixture(scope="session")
 def roots():
     """Unique instance of the test model Model."""
-    path = get_resources_dir() / ".." / ".." / "Model" / "Calculator" / "CaculatorPrj.etp"
+    path = get_resources_dir() / ".." / ".." / ".." / "Model" / "Calculator" / "CaculatorPrj.etp"
     project = load_project(path)
     session = load_session(path)
     return project, session
