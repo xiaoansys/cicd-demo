@@ -41,7 +41,6 @@ jobs:
   check-model:
     name: "Check model"
     runs-on: [self-hosted, xiao-laptop]
-    needs: python-tests
     strategy:
       matrix:
         os: [windows-latest]
@@ -66,7 +65,7 @@ jobs:
     name: Report model
     runs-on: [self-hosted, xiao-laptop]
     # run this step only if the model check is successfull
-    needs: check-model
+    needs: gen-code
     steps:
       - name: "Get SCADE installation directory"
         uses: ansys/scade-actions/get-scade-dir@v2
@@ -120,7 +119,7 @@ jobs:
   simulation-build:
     name: Simulation Build
     runs-on: [self-hosted, xiao-laptop]
-    needs: check-model
+    needs: code-gen
     steps:
     - name: "Get SCADE installation directory"
       uses: ansys/scade-actions/get-scade-dir@v2
@@ -183,7 +182,7 @@ jobs:
   model-test:
     name: Model Test
     runs-on: [self-hosted, xiao-laptop]
-    needs: check-model
+    needs: simulation-build
     steps:
     - name: "Get SCADE installation directory"
       uses: ansys/scade-actions/get-scade-dir@v2
@@ -230,6 +229,7 @@ jobs:
   python-tests:
     name: "Python Tests"   
     runs-on: [self-hosted, xiao-laptop]
+    needs: code-gen
     steps:
     - name: "Install Git and clone project"
       uses: actions/checkout@v4  

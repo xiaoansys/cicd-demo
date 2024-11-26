@@ -45,7 +45,7 @@ def roots():
 def test_get_project_names(roots):
     project, _ = roots
     names = script.get_project_names([project])
-    assert names == ["Model.etp"]
+    assert names == ["CaculatorPrj.etp"]
 
 
 def test_get_operator_paths(roots):
