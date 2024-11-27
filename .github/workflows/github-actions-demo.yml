@@ -61,6 +61,7 @@ jobs:
             scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
             project: ${{env.SCADE_PROJECT_ROOT}}.etp
             configuration:  ${{ env.CONF_CHECK }}
+            
     
   report-model:
     name: Report model
@@ -89,6 +90,7 @@ jobs:
           path: ${{ env.SCADE_PROJECT_ROOT }}.rtf
           if-no-files-found: error
           retention-days: 1
+
     
   gen-code:
     name: Generate Code
@@ -116,6 +118,7 @@ jobs:
           path: "${{ steps.suite-code.outputs.target-directory }}/*.*"
           retention-days: 7
           if-no-files-found: error
+
     
   simulation-build:
     name: Simulation Build
@@ -135,43 +138,6 @@ jobs:
         :: build simulation
         "${{ steps.get-scade-dir.outputs.scade-directory }}\SCADE\bin\scade.exe" -code "${{env.SCADE_PROJECT_ROOT}}.etp" -conf "${{ env.CONF_SIM}}" -sim
   
-  python-proxy-build:
-    name: Python Proxy Build
-    runs-on: [self-hosted, xiao-laptop]
-    needs: gen-code
-    steps:
-    - name: "Get SCADE installation directory"
-      uses: ansys/scade-actions/get-scade-dir@v2
-      id: get-scade-dir
-      with:
-        scade-version: ${{ env.SCADE_VERSION }}
-    
-    - name: "Install Git and clone project"
-      uses: actions/checkout@v4
-      if: ${{ inputs.checkout == 'true' }}
-      
-    - name: "Build the python proxy of a SCADE Suite model"
-      shell: cmd
-      id: python-proxy-build
-      run: |
-        :: build python proxy
-        "${{ steps.get-scade-dir.outputs.scade-directory }}\SCADE\bin\scade.exe" -code "${{env.SCADE_PROJECT_ROOT}}.etp" -conf "${{ env.CONF_PYTHON_PROXY }}" -sim
-    
-    - name: "Execute python-proxy tests"
-      uses: ansys/scade-actions/scade-tests-pytest@v2
-      with:
-        scade-version: ${{ env.SCADE_VERSION }}
-        library-dir: "python-test/python-proxy"
-        pytest-postargs: "python-test/python-proxy/tests -vv --html=python-proxy-test-report.html"
-        checkout: false
-    
-    - name: "Upload JUnit report to artifacts"
-      uses: actions/upload-artifact@v4
-      with:
-        name: "python-proxy-test-report"
-        path: "python-proxy-test-report.html"
-        retention-days: 7
-        if-no-files-found: error
        
   metrics-rules-check:
     name: Model metrics and rules Check
@@ -215,6 +181,7 @@ jobs:
         path: "${{ steps.suite-rules.outputs.report }}"
         retention-days: 7
         if-no-files-found: error
+
     
   model-test:
     name: Model Test
@@ -262,7 +229,46 @@ jobs:
         retention-days: 7
         if-no-files-found: error   
 
+
+  python-proxy-build:
+    name: Python Proxy Build
+    runs-on: [self-hosted, xiao-laptop]
+    needs: gen-code
+    steps:
+    - name: "Get SCADE installation directory"
+      uses: ansys/scade-actions/get-scade-dir@v2
+      id: get-scade-dir
+      with:
+        scade-version: ${{ env.SCADE_VERSION }}
+    
+    - name: "Install Git and clone project"
+      uses: actions/checkout@v4
+      if: ${{ inputs.checkout == 'true' }}
       
+    - name: "Build the python proxy of a SCADE Suite model"
+      shell: cmd
+      id: python-proxy-build
+      run: |
+        :: build python proxy
+        "${{ steps.get-scade-dir.outputs.scade-directory }}\SCADE\bin\scade.exe" -code "${{env.SCADE_PROJECT_ROOT}}.etp" -conf "${{ env.CONF_PYTHON_PROXY }}" -sim
+    
+    - name: "Execute python-proxy tests"
+      uses: ansys/scade-actions/scade-tests-pytest@v2
+      with:
+        scade-version: ${{ env.SCADE_VERSION }}
+        library-dir: "python-test/python-proxy"
+        pytest-postargs: "python-test/python-proxy/tests -vv --html=junit-reports/python-proxy-test-report.html"
+        checkout: false
+    
+    - name: "Upload JUnit report to artifacts"
+      uses: actions/upload-artifact@v4
+      with:
+        name: "python-proxy-test-report"
+        path: "junit-reports\\python-proxy-test-report.html"
+        retention-days: 7
+        if-no-files-found: error        
+      
+  
   python-tests:
     name: "Python Tests"   
     runs-on: [self-hosted, xiao-laptop]
@@ -276,14 +282,14 @@ jobs:
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-setup"
-        pytest-postargs: "python-test/python-setup/tests -vv --html=python-setup-test-report.html"
+        pytest-postargs: "python-test/python-setup/tests -vv --html=junit-reports/python-setup-test-report.html"
         checkout: false
     
     - name: "Upload JUnit report to artifacts"
       uses: actions/upload-artifact@v4
       with:
         name: "python setup test report"
-        path: "python-setup-test-report.html"
+        path: "junit-reports\\python-setup-test-report.html"
         retention-days: 7
         if-no-files-found: error
     
@@ -292,14 +298,14 @@ jobs:
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-pyproject"
-        pytest-postargs: "python-test/python-pyproject/tests -vv --html=python-pyproject-test-report.html"
+        pytest-postargs: "python-test/python-pyproject/tests -vv --html=junit-reports/python-pyproject-test-report.html"
         checkout: false
     
     - name: "Upload JUnit report to artifacts"
       uses: actions/upload-artifact@v4
       with:
         name: "python pyproject test report"
-        path: "python-pyproject-test-report.html"
+        path: "junit-reports\\python-pyproject-test-report.html"
         retention-days: 7
         if-no-files-found: error
     
