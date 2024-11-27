@@ -147,15 +147,16 @@ jobs:
       id: get-scade-dir
       with:
         scade-version: ${{ env.SCADE_VERSION }}
+    
+    - name: "Install Git and clone project"
+      uses: actions/checkout@v4
+      if: ${{ inputs.checkout == 'true' }}
       
     - name: "Generate the code of a SCADE Suite model"
-      uses: ansys/scade-actions/suite-code@v2
-      id: suite-python-proxy-build
-      with:
-        scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
-        project: ${{env.SCADE_PROJECT_ROOT}}.etp
-        configuration:  ${{ env.CONF_PYTHON_PROXY }}
-        build: true
+      shell: cmd
+      id: python-proxy-build
+      run: |
+        "${{ inputs.scade-dir }}\SCADE\bin\scade.exe" -code "${{env.SCADE_PROJECT_ROOT}}.etp" -conf "${{ env.CONF_PYTHON_PROXY }}" -sim
     
     - name: "Execute python-proxy tests"
       uses: ansys/scade-actions/scade-tests-pytest@v2
