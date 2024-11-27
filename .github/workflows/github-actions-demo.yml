@@ -136,7 +136,7 @@ jobs:
         scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
         project: ${{env.SCADE_PROJECT_ROOT}}.etp
         configuration:  ${{ env.CONF_SIM }}
-        build: "true"
+        build: true
   
   python-proxy-build:
     name: Python Proxy Build
@@ -155,7 +155,7 @@ jobs:
         scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
         project: ${{env.SCADE_PROJECT_ROOT}}.etp
         configuration:  ${{ env.CONF_PYTHON_PROXY }}
-        build: "true"
+        build: true
     
     - name: "Execute python-proxy tests"
       uses: ansys/scade-actions/scade-tests-pytest@v2
