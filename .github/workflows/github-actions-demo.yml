@@ -156,7 +156,7 @@ jobs:
       shell: cmd
       id: python-proxy-build
       run: |
-        "${{ inputs.scade-dir }}\SCADE\bin\scade.exe" -code "${{env.SCADE_PROJECT_ROOT}}.etp" -conf "${{ env.CONF_PYTHON_PROXY }}" -sim
+        "${{ steps.get-scade-dir.outputs.scade-directory }}\SCADE\bin\scade.exe" -code "${{env.SCADE_PROJECT_ROOT}}.etp" -conf "${{ env.CONF_PYTHON_PROXY }}" -sim
     
     - name: "Execute python-proxy tests"
       uses: ansys/scade-actions/scade-tests-pytest@v2
