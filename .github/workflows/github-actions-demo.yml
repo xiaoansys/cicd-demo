@@ -29,6 +29,7 @@ env:
   CONF_TEST: Test
   CONF_COV: Coverage
   CONF_SIM: Simulation
+  CONF_PYTHON_PROXY: Python_DLL_Build
   CONF_METRICS: MetricRule
   CONF_RULES: RuleSuccess
 
@@ -41,6 +42,7 @@ jobs:
   check-model:
     name: "Check model"
     runs-on: [self-hosted, xiao-laptop]
+    needs: python-proxy-build
     strategy:
       matrix:
         os: [windows-latest]
@@ -134,6 +136,25 @@ jobs:
         scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
         project: ${{env.SCADE_PROJECT_ROOT}}.etp
         configuration:  ${{ env.CONF_SIM }}
+        build: "true"
+  
+  python-proxy-build:
+    name: Python Proxy Build
+    runs-on: [self-hosted, xiao-laptop]
+    steps:
+    - name: "Get SCADE installation directory"
+      uses: ansys/scade-actions/get-scade-dir@v2
+      id: get-scade-dir
+      with:
+        scade-version: ${{ env.SCADE_VERSION }}
+      
+    - name: "Generate the code of a SCADE Suite model"
+      uses: ansys/scade-actions/suite-code@v2
+      id: suite-python-proxy-build
+      with:
+        scade-dir: ${{ steps.get-scade-dir.outputs.scade-directory }}
+        project: ${{env.SCADE_PROJECT_ROOT}}.etp
+        configuration:  ${{ env.CONF_PYTHON_PROXY }}
         build: "true"
        
   metrics-rules-check:
