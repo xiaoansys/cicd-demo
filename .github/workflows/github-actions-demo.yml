@@ -162,14 +162,14 @@ jobs:
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-proxy"
-        pytest-postargs: "python-test/python-proxy/tests -vv --junitxml=junit-reports/python-proxy-test-report.xml"
+        pytest-postargs: "python-test/python-proxy/tests -vv --html=python-proxy-test-report.html"
         checkout: false
     
     - name: "Upload JUnit report to artifacts"
       uses: actions/upload-artifact@v4
       with:
-        name: "junit-report"
-        path: "junit-reports\\python-proxy-test-report.xml"
+        name: "python-proxy-test-report"
+        path: "python-proxy-test-report.html"
         retention-days: 7
         if-no-files-found: error
        
@@ -276,14 +276,14 @@ jobs:
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-setup"
-        pytest-postargs: "python-test/python-setup/tests -vv --junitxml=junit-reports/python-setup-test-report.xml"
+        pytest-postargs: "python-test/python-setup/tests -vv --html=python-setup-test-report.html"
         checkout: false
     
     - name: "Upload JUnit report to artifacts"
       uses: actions/upload-artifact@v4
       with:
-        name: "junit-report"
-        path: "junit-reports\\python-setup-test-report.xml"
+        name: "python setup test report"
+        path: "python-setup-test-report.html"
         retention-days: 7
         if-no-files-found: error
     
@@ -292,14 +292,14 @@ jobs:
       with:
         scade-version: ${{ env.SCADE_VERSION }}
         library-dir: "python-test/python-pyproject"
-        pytest-postargs: "python-test/python-pyproject/tests -vv --junitxml=junit-reports/python-pyproject-test-report.xml"
+        pytest-postargs: "python-test/python-pyproject/tests -vv --html=python-pyproject-test-report.html"
         checkout: false
     
     - name: "Upload JUnit report to artifacts"
       uses: actions/upload-artifact@v4
       with:
-        name: "junit-report"
-        path: "junit-reports\\python-pyproject-test-report.xml"
+        name: "python pyproject test report"
+        path: "python-pyproject-test-report.html"
         retention-days: 7
         if-no-files-found: error
     
